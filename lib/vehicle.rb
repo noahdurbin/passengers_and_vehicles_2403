@@ -27,6 +27,9 @@ class Vehicle
     end
 
     def num_adults
-
+        adults_array = @passengers.find_all do |passenger|
+            passenger.adult?
+        end
+        adults_array.length
     end
 end
