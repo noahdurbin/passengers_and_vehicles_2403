@@ -14,6 +14,7 @@ class NationalPark
     end
 
     def admit_vehicle(vehicle)
+        collect_revenue
         @vehicles << vehicle
     end
     
@@ -23,5 +24,13 @@ class NationalPark
                 @visitors << person
             end
         end.flatten
+    end
+
+    def collect_revenue
+        @visitors.each do |visitor|
+            if visitor.adult?
+                @revenue += @admission_price
+            end
+        end
     end
 end
