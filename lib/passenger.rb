@@ -4,8 +4,8 @@ class Passenger
                 :age
 
     def initialize(passenger_data)
-        @name =
-        @age = 
+        @name = passenger_data['name']
+        @age = passenger_data['age']
     end
 
     def adult?
