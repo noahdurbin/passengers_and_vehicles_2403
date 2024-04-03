@@ -28,10 +28,11 @@ RSpec.describe NationalPark do
 
     it 'can list all the passengers in the park' do
         @rocky_mtn.admit_vehicle(@vehicle)
-        expect(@rocy_mtn.visitors).to eq([@charlie, @jude, @taylor])
+        expect(@rocky_mtn.visitors).to eq([@charlie, @jude, @taylor])
     end
 
     it 'can calculate revenue generated' do
-
+        @rocky_mtn.admit_vehicle(@vehicle)
+        expect(@rocky_mtn.revenue).to eq(40)
     end
 end
